@@ -33,7 +33,10 @@ app.get('/api/products', (req, res, next) => {
       const products = result.rows;
       res.status(200).send(products);
     })
-    .catch(err => res.status(500).send('Query error!', err));
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send('An unexpected error has occurred');
+    });
 });
 
 app.use('/api', (req, res, next) => {
