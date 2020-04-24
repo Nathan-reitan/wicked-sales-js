@@ -37,7 +37,7 @@ export default class ProductDetails extends React.Component {
               <p className="p-2">{product.shortDescription}</p>
             </div>
           </div>
-          <p>{product.longDescription}</p>
+          <p className="p-2">{product.longDescription}</p>
         </div>
       );
     } else {
