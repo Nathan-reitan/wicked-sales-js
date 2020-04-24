@@ -37,9 +37,6 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="container">
-        {this.state.isLoading
-          ? <h1>Testing connections...</h1>
-          : <h1>{this.state.message}</h1>}
         <Header/>
         {this.state.view.name === 'catalog'
           ? <ProductList setView={this.setView} />
