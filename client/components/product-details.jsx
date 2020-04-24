@@ -1,0 +1,47 @@
+import React from 'react';
+
+export default class ProductDetails extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: null
+    };
+  }
+
+  componentDidMount() {
+    this.getProduct();
+  }
+
+  getProduct() {
+    fetch(`/api/products/${this.props.params.productId}`)
+      .then(resp => resp.json())
+      .then(data => {
+        return this.setState(state => ({
+          product: data
+        }));
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
+  render() {
+    const product = this.state.product;
+    if (product) {
+      return (
+        <div className="d-flex flex-wrap border shadow">
+          <div><span onClick={() => this.props.setView('catalog')} className="text-muted pointer">Back to Catalog</span></div>
+          <div className="detailCard d-flex flex-row flex-wrap">
+            <img src={product.image} alt={product.name} className="contain mb-2" />
+            <div className="d-flex flex-column flex-wrap">
+              <h5 className="p-2">{product.name}</h5>
+              <div className="p-2 h5"><span className="text-muted">${(product.price / 100).toFixed(2)}</span></div>
+              <p className="p-2">{product.shortDescription}</p>
+            </div>
+          </div>
+          <p>{product.longDescription}</p>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  }
+}
