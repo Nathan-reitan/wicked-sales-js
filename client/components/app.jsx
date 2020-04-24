@@ -12,8 +12,7 @@ export default class App extends React.Component {
       view: {
         name: 'catalog',
         params: {}
-      },
-      isToggled: false
+      }
     };
     this.setView = this.setView.bind(this);
   }
@@ -32,13 +31,6 @@ export default class App extends React.Component {
         name: name,
         params: params
       }
-    }));
-  }
-
-  toggle(productId) {
-    return this.setState(state => ({
-      isToggled: !state.isToggled,
-      productId: productId
     }));
   }
 
