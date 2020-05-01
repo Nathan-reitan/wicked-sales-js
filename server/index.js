@@ -109,14 +109,14 @@ app.post('/api/cart', (req, res, next) => {
       if (!product) {
         throw new ClientError('no product found with that productId', 400);
       }
+      if (req.session.cartId) {
+        return req.session.cartId;
+      }
       return db.query(`insert into "carts" ("cartId", "createdAt")
                 values (default, default)
                 returning "cartId"
                 `)
         .then(result => {
-          if (req.session.cartId) {
-            result.rows[0].cartId = req.session.cartId;
-          }
           return result.rows[0];
         })
         .then(cart => {
