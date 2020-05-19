@@ -85,7 +85,7 @@ app.get('/api/cart', (req, res, next) => {
             where "c"."cartId" = $1
            `, params)
       .then(cart => {
-        return res.status(201).send(cart.rows[0]);
+        return res.status(201).json(cart.rows[0]);
       });
   }
 
