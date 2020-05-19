@@ -28,7 +28,11 @@ export default class ProductDetails extends React.Component {
     if (product) {
       return (
         <div className="d-flex flex-wrap border shadow">
-          <div><span onClick={() => this.props.setView('catalog')} className="text-muted pointer">Back to Catalog</span></div>
+          <div>
+            <span onClick={() => this.props.setView('catalog')} className="text-muted pointer">
+              Back to Catalog
+            </span>
+          </div>
           <div className="detailCard d-flex flex-row flex-wrap">
             <img src={product.image} alt={product.name} className="contain mb-2" />
             <div className="d-flex flex-column flex-wrap">
