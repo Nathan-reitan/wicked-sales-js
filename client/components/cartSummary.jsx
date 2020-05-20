@@ -14,8 +14,6 @@ export default function CartSummary(props) {
         <CartSummaryItems key={product.productId} product={product} />
       );
     });
-  } else {
-    productsList = <h2>There are no items in your cart!</h2>;
   }
   return (
     <div>
@@ -26,7 +24,14 @@ export default function CartSummary(props) {
         </span>
       </div>
       {productsList}
-      <div><h3>Total: ${(totalPrice / 100).toFixed(2)}</h3></div>
+      <div className="d-flex justify-content-between">
+        <h3>Total: ${(totalPrice / 100).toFixed(2)}</h3>
+        {products.length
+          ? <button onClick={() => props.setView('checkout')} className="btn btn-primary">Checkout</button>
+          : <h2>There are no items in your cart!</h2>
+        }
+      </div>
+
     </div>
   );
 }
