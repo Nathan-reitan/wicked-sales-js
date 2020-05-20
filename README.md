@@ -3,14 +3,14 @@ A full stack Node.js and React shopping cart app
 ## Live Site
 See the live site here - [wickedSales](https://wicked-sales.nathanreitan.com/)
 ## Technologies
-*HTML5
-*CSS3
-*React
-*Bootstrap
-*AWS EC2
-*Node
-*PostgreSQL
-*Webpack 4
+* HTML5
+* CSS3
+* React
+* Bootstrap
+* AWS EC2
+* Node
+* PostgreSQL
+* Webpack 4
 ## Feature List
 1. User can view the products for sale - Full Stack
 2. User can view the details of a product - Full Stack
