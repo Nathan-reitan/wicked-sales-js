@@ -37,7 +37,11 @@ pgweb --db=wickedSales
 ```
 sudo service postgresql start
 ```
-5. Start the project.  Once your system finishes compiling you can view the application by opening http:localhost:3000 in your browser
+5. Import existing database
+```
+npm run db:import
+```
+6. Start the project.  Once your system finishes compiling you can view the application by opening http:localhost:3000 in your browser
 ```
 npm run dev
 ```
