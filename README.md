@@ -1,4 +1,4 @@
-# Wicked-sales
+# wicked-sales
 A full stack Node.js and React shopping cart app
 ## Live Site
 See the live site here - [wickedSales](https://wicked-sales.nathanreitan.com/)
