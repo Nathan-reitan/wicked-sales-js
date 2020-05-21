@@ -22,26 +22,27 @@ See the live site here - [wickedSales](https://wicked-sales.nathanreitan.com/)
 * NPM 6 or higher
 ## Getting Started
 1. Clone the repository and navigate to the directory
-```
+```shell
+git clone https://github.com/Nathan-reitan/wicked-sales-js.git
 cd wickedSales
 ```
 2. Install all dependencies with NPM
-```
+```shell
 npm install
 ```
 3. Setup database
-```
+```shell
 pgweb --db=wickedSales
 ```
 4. initialize postgres server
-```
+```shell
 sudo service postgresql start
 ```
 5. Import existing database
-```
+```shell
 npm run db:import
 ```
 6. Start the project.  Once your system finishes compiling you can view the application by opening http:localhost:3000 in your browser
-```
+```shell
 npm run dev
 ```
