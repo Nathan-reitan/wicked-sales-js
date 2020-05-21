@@ -103,10 +103,13 @@ export default class App extends React.Component {
       content = <div>Something went wrong!</div>;
     }
     return (
-      <div className="container">
-        <Header cartItemCount={this.state.cart.length} setView={this.setView}/>
-        {content}
+      <div>
+        <Header cartItemCount={this.state.cart.length} setView={this.setView} />
+        <div className="container">
+          {content}
+        </div>
       </div>
+
     );
   }
 }
