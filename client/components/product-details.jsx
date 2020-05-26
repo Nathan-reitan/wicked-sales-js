@@ -27,7 +27,7 @@ export default class ProductDetails extends React.Component {
     const product = this.state.product;
     if (product) {
       return (
-        <div className="d-flex flex-wrap border shadow">
+        <div className="d-flex flex-wrap detailContainer shadow">
           <div>
             <span onClick={() => this.props.setView('catalog')} className="text-muted pointer">
               Back to Catalog
