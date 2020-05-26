@@ -17,21 +17,21 @@ export default function CartSummary(props) {
   }
   return (
     <div>
-      <header><h2>Your Cart</h2></header>
       <div>
-        <span onClick={() => props.setView('catalog')} className="text-muted pointer">
+        <span onClick={() => props.setView('catalog')} className="text-light pointer">
           Back to Catalog
         </span>
       </div>
+      <header><h2 className="text-white">Your Cart</h2></header>
       {productsList}
-      <div className="d-flex justify-content-between">
-        <h3>Total: ${(totalPrice / 100).toFixed(2)}</h3>
-        {products.length
-          ? <button onClick={() => props.setView('checkout')} className="btn btn-primary">Checkout</button>
-          : <h2>There are no items in your cart!</h2>
-        }
-      </div>
-
+      {products.length
+        ? <div className="d-flex justify-content-between">
+          <h3 className="text-white">Total: ${(totalPrice / 100).toFixed(2)}</h3>
+          <button onClick={() => props.setView('checkout')} className="btn btn-primary">Checkout</button>
+        </div>
+        : <h2 className="text-white w-100">There are no items in your cart!</h2>
+      }
+      <div className="d-flex justify-content-center"><img src="./images/ASCII-Dancing-Kitty.gif" alt="Dancing Cat" className="dancingCat"/></div>
     </div>
   );
 }
