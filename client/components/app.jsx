@@ -105,7 +105,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header cartItemCount={this.state.cart.length} setView={this.setView} />
-        <div className="container">
+        <div className="container d-flex justify-content-center">
           {content}
         </div>
       </div>

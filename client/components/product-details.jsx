@@ -28,7 +28,7 @@ export default class ProductDetails extends React.Component {
     if (product) {
       return (
         <div className="d-flex flex-wrap detailContainer shadow">
-          <div>
+          <div className="catalog">
             <span onClick={() => this.props.setView('catalog')} className="text-muted pointer">
               Back to Catalog
             </span>
