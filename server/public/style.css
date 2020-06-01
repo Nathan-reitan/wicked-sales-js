@@ -3,7 +3,6 @@ body{
 }
 
 .container{
-  background-color: black;
   background-image: url(./images/background-image.png);
   background-size: cover;
   overflow: auto;
@@ -120,8 +119,8 @@ img{
 
     .detailCard>div>button{
       position: absolute;
-      left: 70%;
-      top: 32%;
+      left: 60%;
+      top: 35%;
     }
 
     .detailCard>img{
