@@ -31,7 +31,7 @@ export default function CartSummary(props) {
         </div>
         : <h2 className="text-white w-100">There are no items in your cart!</h2>
       }
-      <div className="d-flex justify-content-center"><img src="./images/ASCII-Dancing-Kitty.gif" alt="Dancing Cat" className="dancingCat"/></div>
+      <div className="d-flex justify-content-center my-1"><img src="./images/ASCII-Dancing-Kitty.gif" alt="Dancing Cat" className="dancingCat"/></div>
     </div>
   );
 }
