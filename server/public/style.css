@@ -1,13 +1,12 @@
 body{
-  background-color: black;
+    background-image: url(./images/background-image.png);
+    background-size: cover;
+    overflow: auto;
+    background-repeat: repeat;
 }
 
 .container{
-  background-image: url(./images/background-image.png);
-  background-size: cover;
-  overflow: auto;
   padding-bottom: 2px;
-  background-repeat: repeat;
 }
 
 .d-flex{

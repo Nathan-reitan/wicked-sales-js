@@ -29,7 +29,7 @@ export default class ProductDetails extends React.Component {
       return (
         <div className="d-flex flex-wrap detailContainer shadow">
           <div className="catalog">
-            <span onClick={() => this.props.setView('catalog')} className="pointer">
+            <span onClick={() => this.props.setView('catalog')} className="pointer text-white">
               Back to Catalog
             </span>
           </div>
