@@ -40,8 +40,13 @@ export default class App extends React.Component {
     fetch('/api/cart')
       .then(response => response.json())
       .then(data => {
+        if (data.length === 0) {
+          return this.setState(() => ({
+            cart: []
+          }));
+        }
         return this.setState(() => ({
-          cart: data
+          cart: [data]
         }));
       });
   }
