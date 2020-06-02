@@ -1,8 +1,5 @@
 body{
-    background-image: url(./images/background-image.png);
-    background-size: cover;
-    overflow: auto;
-    background-repeat: repeat;
+    background:url(./images/background-image.png)no-repeat center center fixed;
 }
 
 .container{
