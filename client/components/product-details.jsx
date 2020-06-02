@@ -27,7 +27,7 @@ export default class ProductDetails extends React.Component {
     const product = this.state.product;
     if (product) {
       return (
-        <div className="d-flex flex-wrap detailContainer shadow">
+        <div className="d-flex flex-wrap detailContainer shadow p-2">
           <div className="catalog">
             <span onClick={() => this.props.setView('catalog')} className="pointer text-white">
               Back to Catalog
@@ -36,13 +36,15 @@ export default class ProductDetails extends React.Component {
           <div className="detailCard d-flex flex-row flex-wrap">
             <img src={product.image} alt={product.name} className="contain mb-2" />
             <div className="d-flex flex-column flex-wrap">
-              <h5 className="p-2">{product.name}</h5>
-              <div className="p-2 h5"><span>${(product.price / 100).toFixed(2)}</span></div>
-              <p className="p-2">{product.shortDescription}</p>
+              <h5 className="">{product.name}</h5>
+              <div className=" h5"><span>${(product.price / 100).toFixed(2)}</span></div>
+              <p className="">{product.shortDescription}</p>
               <button type='button' onClick={() => this.props.addtoCart(product.productId)} className="btn btn-primary w-25 p-1">Add to Cart</button>
             </div>
           </div>
-          <p className="p-2">{product.longDescription}</p>
+          <div>
+            <p>{product.longDescription}</p>
+          </div>
         </div>
       );
     } else {
