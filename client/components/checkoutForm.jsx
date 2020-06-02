@@ -28,26 +28,42 @@ export default class CheckoutForm extends React.Component {
 
   render() {
     return (
-      <div className="d-flex flex-column">
-        <form className="d-flex flex-column" onSubmit={this.handleSubmit}>
-          <input
-            id="name"
-            type="text"
-            placeholder="Enter Name Here"
-            onChange={this.handleChange}/>
-          <input
-            id="creditCard"
-            type="text"
-            placeholder="Enter Credit Card Number Here"
-            onChange={this.handleChange}/>
-          <textarea
-            id="shippingAddress"
-            cols="30" rows="5"
-            placeholder="Enter Shipping Address Here"
-            onChange={this.handleChange}></textarea>
+      <div className="p-2">
+        <div className="d-flex justify-content-center text-light my-1">
+          <h3>Please enter your information below.</h3>
+        </div>
+        <form onSubmit={this.handleSubmit} className="mt-1">
+          <div className="form-row">
+            <div className="form-group col-md-6">
+              <input
+                id="name"
+                type="text"
+                className="form-control"
+                placeholder="Enter Name Here"
+                onChange={this.handleChange}
+                required/>
+            </div>
+            <div className="form-group col-md-6">
+              <input
+                id="creditCard"
+                type="text"
+                className="form-control"
+                placeholder="Enter Credit Card Number Here"
+                onChange={this.handleChange}
+                required/>
+            </div>
+            <div className="form-group col-md-12">
+              <textarea
+                id="shippingAddress"
+                className="form-control"
+                placeholder="Enter Shipping Address Here"
+                onChange={this.handleChange}
+                required></textarea>
+            </div>
+          </div>
           <div className="d-flex justify-content-between">
-            <span onClick={() => this.props.setView('catalog')} className="text-muted pointer">
-            Continue Shopping
+            <span onClick={() => this.props.setView('catalog')} className="text-light pointer H6">
+             Continue Shopping
             </span>
             <button type="submit" className="btn btn-primary">Place Order</button>
           </div>

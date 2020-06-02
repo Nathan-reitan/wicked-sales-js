@@ -16,7 +16,7 @@ export default function CartSummary(props) {
     });
   }
   return (
-    <div>
+    <div className="p-2">
       <div>
         <span onClick={() => props.setView('catalog')} className="text-light pointer">
           Back to Catalog
@@ -31,7 +31,6 @@ export default function CartSummary(props) {
         </div>
         : <h2 className="text-white w-100">There are no items in your cart!</h2>
       }
-      <div className="d-flex justify-content-center my-1"><img src="./images/ASCII-Dancing-Kitty.gif" alt="Dancing Cat" className="dancingCat"/></div>
     </div>
   );
 }
