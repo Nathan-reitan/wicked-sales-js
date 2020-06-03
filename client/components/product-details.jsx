@@ -35,7 +35,7 @@ export default class ProductDetails extends React.Component {
           </div>
           <div className="detailCard d-flex flex-row flex-wrap">
             <img src={product.image} alt={product.name} className="contain mb-2" />
-            <div className="d-flex flex-column flex-wrap">
+            <div className="d-flex flex-column flex-wrap w-50">
               <h5 className="">{product.name}</h5>
               <div className=" h5"><span>${(product.price / 100).toFixed(2)}</span></div>
               <p className="">{product.shortDescription}</p>
