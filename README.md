@@ -30,19 +30,15 @@ cd wickedSales
 ```shell
 npm install
 ```
-3. Setup database
-```shell
-pgweb --db=wickedSales
-```
-4. initialize postgres server
+3. initialize postgres server
 ```shell
 sudo service postgresql start
 ```
-5. Import existing database
+4. Import existing database
 ```shell
 npm run db:import
 ```
-6. Start the project.  Once your system finishes compiling you can view the application by opening http:localhost:3000 in your browser
+5. Start the project.  Once your system finishes compiling you can view the application by opening http:localhost:3000 in your browser
 ```shell
 npm run dev
 ```
