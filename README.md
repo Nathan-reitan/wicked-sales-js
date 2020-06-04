@@ -5,10 +5,10 @@ See the live site here - [wickedSales](https://wicked-sales.nathanreitan.com/)
 ## Technologies
 * HTML5
 * CSS3
-* React
+* JavaScript | React.js
 * Bootstrap
 * AWS EC2
-* Node
+* Node.js
 * PostgreSQL
 * Webpack 4
 * npm
