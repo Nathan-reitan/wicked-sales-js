@@ -11,6 +11,7 @@ See the live site here - [wickedSales](https://wicked-sales.nathanreitan.com/)
 * Node
 * PostgreSQL
 * Webpack 4
+* npm
 ## Feature List
 1. User can view the products for sale - Full Stack
 2. User can view the details of a product - Full Stack
