@@ -33,17 +33,17 @@ export default class ProductDetails extends React.Component {
               Back to Catalog
             </span>
           </div>
-          <div className="detailCard d-flex flex-row flex-wrap">
+          <div className="h-50 detailCard d-flex flex-row flex-wrap my-3">
             <img src={product.image} alt={product.name} className="contain mb-2" />
-            <div className="d-flex flex-column flex-wrap w-50">
+            <div className="d-flex flex-column flex-wrap w-75">
               <h5>{product.name}</h5>
               <div className="h5"><span>${(product.price / 100).toFixed(2)}</span></div>
               <p>{product.shortDescription}</p>
-              <button type='button' onClick={() => this.props.addtoCart(product.productId)} className="btn btn-primary w-25 p-1">Add to Cart</button>
+              <button type='button' onClick={() => this.props.addtoCart(product.productId)} className="btn btn-primary p-1 my-1">Add to Cart</button>
             </div>
           </div>
           <div>
-            <p>{product.longDescription}</p>
+            {product.longDescription}
           </div>
         </div>
       );
